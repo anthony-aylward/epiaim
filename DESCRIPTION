@@ -1,0 +1,12 @@
+Package: epiaim
+Title: Epigenomic AIM
+Version: 0.0.1
+Authors@R: 
+    person(given = "Anthony",
+           family = "Aylward",
+           role = c("aut", "cre"),
+           email = "aaylward@eng.ucsd.edu")
+Description: Use epigenomic allelic imbalance data to fine-map eQTLs
+License: MIT
+Encoding: UTF-8
+LazyData: true
