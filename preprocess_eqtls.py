@@ -23,7 +23,7 @@ def main():
     genome = funcgenom.Genome()
     with open(args.gene_ids, 'r') as f:
         gene_ids = f.read().splitlines()
-    colocalize.load_islet_eqtl_data(genome, *gene_ids, processes=23)
+    colocalize.load_islet_eqtl_data(genome, *gene_ids, processes=23, graceful=True)
     with open('test.p', 'wb') as f:
         pickle.dump(genome, f)
 
