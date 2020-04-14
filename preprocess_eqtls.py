@@ -1,6 +1,7 @@
 import funcgenom
 import os
 import sys
+import pickle
 
 sys.path.append('/home/data/kglab-python3-modules')
 import colocalize
@@ -21,5 +22,7 @@ def main():
     args = parse_arguments()
     genome = funcgenom.Genome()
     with open(args.gene_ids, 'r') as f:
-        gene_ids = f.splitlines()
-    colocalize.load_islet_eqtl_data(genome, gene_ids, processes=23)
+        gene_ids = f.read().splitlines()
+    colocalize.load_islet_eqtl_data(genome, *gene_ids, processes=23)
+    with open('test.p', 'wb') as f:
+        pickle.dump(genome, f)
