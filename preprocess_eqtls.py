@@ -26,3 +26,7 @@ def main():
     colocalize.load_islet_eqtl_data(genome, *gene_ids, processes=23)
     with open('test.p', 'wb') as f:
         pickle.dump(genome, f)
+
+
+if __name__ == '__main__':
+    main()
